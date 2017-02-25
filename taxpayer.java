@@ -1,4 +1,4 @@
-import java.io.IOException; 
+﻿import java.io.IOException; 
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
@@ -303,7 +303,7 @@ public class taxpayer
 		conf.set("mapred.textoutputformat.separator", ",");
 		Job job = Job.getInstance(conf);
 	    job.setJarByClass(taxpayer.class);
-	    job.setJobName("Country Based Analysis");
+	    job.setJobName("Tax and Per Capita");
 		job.setReducerClass(taxandmeanReducer.class);
 		job.setOutputKeyClass(LongWritable.class);
 		job.setOutputValueClass(Text.class);
